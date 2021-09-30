@@ -1,5 +1,5 @@
 # Software Engineering Assessment
-![Banked-Image](https://user-images.githubusercontent.com/46195831/135531836-3cf56e1c-288b-46c1-8ffd-023bc9a8e23a.png)
+![Banked-Image](https://user-images.githubusercontent.com/46195831/135538510-66c1dd4c-57c8-467b-9783-dce63e3a04b7.png)
 
 This repo is my submission for the software engineering test given by Banked.com.
 ### Solution
