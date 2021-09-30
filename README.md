@@ -3,7 +3,7 @@
 
 This repo is my submission for the software engineering test given by Banked.com.
 ### Solution
-Here is the required function.
+[Here is the required function](https://github.com/Ghvstcode/Banked/blob/main/main.go#L38).
 ```Go
 func denominationChange(amount float64) map[float64]int {  
    m := make(map[float64]int)  
