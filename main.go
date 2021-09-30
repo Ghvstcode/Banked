@@ -3,15 +3,38 @@ package main
 import (
 	"fmt"
 	"math"
+	"os"
+	"strconv"
 )
 
 func main() {
-	amount := 1972.78
-	fmt.Println(denominationChange(amount))
+	// Check to see that the file name argument is passed in.
+	if len(os.Args) < 2 {
+		fmt.Fprintln(os.Stderr, "a floating point number is required as input")
+		os.Exit(-1)
+	}
+
+	// Convert input string to float64.
+	amount, err := strconv.ParseFloat(os.Args[1], 64)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(-1)
+	}
+
+	// Pass the userInput over to the denominationChange function.
+	m := denominationChange(amount)
+	if m == nil {
+		fmt.Fprintln(os.Stderr, "Unable to compute cashUnit")
+	}
+
+	// Range over the returned struct and format string printing out value.
+	for k, v := range m {
+		fmt.Fprintf(os.Stderr, "\t%d x %.2f\t= %.2f\n", v, k, float64(v)*k)
+	}
 }
 
 // denominationChange returns the number of each cash-unit
-//that fits into the given input by achieving the smallest total number of cash-units.
+// that fits into the given input by achieving the smallest total number of cash-units.
 func denominationChange(amount float64) map[float64]int {
 	m := make(map[float64]int)
 
