@@ -46,7 +46,7 @@ I decided to take my implementation a little further, making it easy to try out 
 * To Build this program, You need to have Go installed on your machine.*
 * Clone/Unzip this project & navigate to the project path.
 * Run the following command `go build`.
-* Run `./banked $(name_of_text_file)`.
+* Run `./banked $(floating_point_number)`.
 *
 ***Run Tests***
 * To run the tests, run the following command. `go test -bench=.`
